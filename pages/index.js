@@ -5,7 +5,7 @@ import "isomorphic-unfetch";
 export default class Index extends React.Component {
   static async getInitialProps() {
     // eslint-disable-next-line no-undef
-    const res = await fetch("http://localhost/api/wp/v2/posts");
+    const res = await fetch("http://localhost/wp-json/wp/v2/posts"); // URL REST API dari Wordpress
     const json = await res.json();
     return { posts: json };
   }
